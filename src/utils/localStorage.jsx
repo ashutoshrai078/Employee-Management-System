@@ -2,12 +2,12 @@ const employees = [
   {
     id: 1,
     firstName: "Rahul",
-    email: "employee1@example.com",
+    email: "e@e.com",
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 1,
-      completed: 1,
+      newTask: 4,
+      completed: 2,
       failed: 1
     },
     tasks: [
