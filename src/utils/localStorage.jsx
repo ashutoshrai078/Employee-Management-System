@@ -6,8 +6,8 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 4,
-      completed: 2,
+      newTask: 0,
+      completed: 1,
       failed: 1
     },
     tasks: [
@@ -17,7 +17,7 @@ const employees = [
         date: "2025-01-05",
         category: "Reporting",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -50,7 +50,7 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 2,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -61,7 +61,7 @@ const employees = [
         date: "2025-01-03",
         category: "Development",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -104,7 +104,7 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 2,
-      newTask: 1,
+      newTask: 0,
       completed: 2,
       failed: 1
     },
@@ -115,7 +115,7 @@ const employees = [
         date: "2025-01-04",
         category: "Design",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -168,7 +168,7 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 2,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 0
     },
@@ -179,7 +179,7 @@ const employees = [
         date: "2025-01-01",
         category: "IT Operations",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -212,7 +212,7 @@ const employees = [
     password: "123",
     taskCounts: {
       active: 1,
-      newTask: 1,
+      newTask: 0,
       completed: 2,
       failed: 1
     },
@@ -223,7 +223,7 @@ const employees = [
         date: "2025-01-04",
         category: "Support",
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false
       },
@@ -265,6 +265,7 @@ const employees = [
 const admin = [
   {
     "id": 1,
+    "firstName": "John Doe",
     "email": "admin@example.com",
     "password": "123"
   }
