@@ -6,11 +6,6 @@ import { getLocalStorage, setLocalStorage } from './utils/localStorage';
 import { AuthContext } from './context/AuthProvider';
 
 const App = () => {
-  // useEffect(()=>{
-  //   setLocalStorage()
-  //   getLocalStorage()
-  // })
-
   
   const [user, setUser] = useState(null);
   const [loggedInUserData, setloggedInUserData] = useState(null)
@@ -48,8 +43,6 @@ const App = () => {
    <>
    {!user ? <Login handleLogin ={handleLogin} /> : ''}
    {user == 'admin' ? <AdminDashboard changeUser={setUser}/> : (user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData}/> : null)};
-   {/* <EmployeeDashboard/> */}
-   {/* <AdminDashboard/> */}
    </>
   )
 }

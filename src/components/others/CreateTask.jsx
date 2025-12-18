@@ -5,9 +5,9 @@ const CreateTask = () => {
 
   const [userData, setUserData] = useContext(AuthContext)
 
-  const [taskTitle, setTaskTitle] = useState('')
-  const [taskDescription, setDescription] = useState('')
-  const [taskDate, setDate] = useState('')
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [date, setDate] = useState('')
   const [assignTo, setAssignTo] = useState('')
   const [category, setCategory] = useState('')
   
@@ -15,7 +15,7 @@ const CreateTask = () => {
 
   const submitHandler = (e)=>{
     e.preventDefault();
-    setNewTask({taskTitle,taskDescription,taskDate,category,active:false,newTask:true, failed:false, completed:false})
+    setNewTask({title,description,date,category,active:false,newTask:true, failed:false, completed:false})
 
     const data = userData
     
@@ -28,7 +28,7 @@ const CreateTask = () => {
    console.log(data);
    
 
-    setTaskTitle('')
+    setTitle('')
     setAssignTo('')
     setDescription('')
     setDate('')
@@ -43,8 +43,8 @@ const CreateTask = () => {
             <div>
                 <h3>Enter Task</h3>
                 <input 
-                  value={taskTitle}
-                  onChange={(e)=>{setTaskTitle(e.target.value)}}
+                  value={title}
+                  onChange={(e)=>{setTitle(e.target.value)}}
                   type="text" 
                   placeholder='Enter Title' 
                   className='bg-transparent px-2 mb-2 font-sm rounded border-white border' 
@@ -53,7 +53,7 @@ const CreateTask = () => {
             <div>
               <h3>Date</h3>
               <input 
-                value={taskDate}
+                value={date}
                 onChange={(e)=>{setDate(e.target.value)}}
                 type="date" 
                 className='bg-transparent rounded px-2 border-white mb-2 border font-sm'
@@ -83,7 +83,7 @@ const CreateTask = () => {
           <div className='w-1/2 flex flex-col'>
             <h3>Description</h3>
             <textarea
-              value={taskDescription}
+              value={description}
               onChange={(e)=>{setDescription(e.target.value)}} 
               className='bg-transparent h-full mt-3 mb-2 border-white rounded border'>
             </textarea>
